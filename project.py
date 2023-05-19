@@ -1,5 +1,6 @@
 import random
 import time
+import os
 
 
 def SayiTahmin():
@@ -39,18 +40,34 @@ def SayiTahmin():
 
 
 def AdamAsmaca():
-    print("Nasil oynanir?\n")
+    print(*"Nasil oynanir?")
+    print("***********************************\n")
+    print("1.Kullanici maksimum 12 harfli tek kelime yazar.\n")
+    print("2.Kullanici bu kelimeyi asilmadan bulmaya calisir.\n")
+    print("Turkce karakter kullanmak yasak!\n")
     print("***********************************")
-    print()
+    input("Hazirsaniz Enter tusuna basin...")
+
+    kelime = input("Bulunmasini istediginiz kelimeyi girin:")
+    kelime = kelime.upper
+    if ((len(kelime) > 12) or (len(kelime) <= 0)):
+        print("Maksimum 12 karakter lutfen!\n")
+        print("Turkce karakter uyumsuz!\n")
+        kelime = input("Bulunmasini istediginiz kelimeyi girin:")
+        kelime = kelime.upper
+    os.system("clear")
+    print("A B C D E F G H I J K L M N O P R S T U V Y Z W Q X\n")
 
 
 def OyunMenu():
+    os.system("clear")
     print("Oyun Menusune Hos Geldiniz...\n")
     print("Lutfen Oynamak Istediginiz Oyunu Listeden Tuslayin\n")
     print("***********************************\n")
     print("1-Sayi Tahmin Oyunu 1-5 Level")
     print("2-Adam Asmaca 2 kisilik\n")
     oyunSec = int(input("***********************************\n"))
+    print("\n")
     if (oyunSec == 1):
         SayiTahmin()
     elif (oyunSec == 2):
