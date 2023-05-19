@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/alpaltan/Desktop/vks-py-project",
+      "program": "/Users/alpaltan/Desktop/vks-py-project/build/Debug/outDebug"
+    }
+  ]
+}
