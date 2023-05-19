@@ -1,13 +1,6 @@
 import random
 import time
 
-print("Oyun Menusune Hos Geldiniz...\n")
-print("Lutfen Oynamak Istediginiz Oyunu Listeden Tuslayin\n")
-print("***********************************\n")
-print("1-Sayi Tahmin Oyunu 1-5 Level")
-print("2-Adam Asmaca\n")
-oyunSec = int(input("***********************************\n"))
-
 
 def SayiTahmin():
     levelList = [30, 50, 100, 200, 400]
@@ -26,6 +19,8 @@ def SayiTahmin():
         randomSayi = random.randint(1, tepeDeger)
         if (can == 0):
             print("Uzgunum canin Bitti... :(")
+            a = input("Menuye donmek icin Enter tusuna basin: ")
+            OyunMenu()
             break
         print("Seviye: " + str(i+1))
         while can != 0:
@@ -41,3 +36,25 @@ def SayiTahmin():
             elif (girilenDeger > (randomSayi)):
                 can -= 1
                 print("Tuttugum sayi tahmininden daha KUCUK! | Kalan Can: " + str(can))
+
+
+def AdamAsmaca():
+    print("Nasil oynanir?\n")
+    print("***********************************")
+    print()
+
+
+def OyunMenu():
+    print("Oyun Menusune Hos Geldiniz...\n")
+    print("Lutfen Oynamak Istediginiz Oyunu Listeden Tuslayin\n")
+    print("***********************************\n")
+    print("1-Sayi Tahmin Oyunu 1-5 Level")
+    print("2-Adam Asmaca 2 kisilik\n")
+    oyunSec = int(input("***********************************\n"))
+    if (oyunSec == 1):
+        SayiTahmin()
+    elif (oyunSec == 2):
+        AdamAsmaca()
+
+
+OyunMenu()
