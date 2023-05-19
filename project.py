@@ -50,13 +50,9 @@ def AdamAsmaca():
 
     kelime = input("Bulunmasini istediginiz kelimeyi girin:")
     kelime = kelime.upper
-    if ((len(kelime) > 12) or (len(kelime) <= 0)):
-        print("Maksimum 12 karakter lutfen!\n")
-        print("Turkce karakter uyumsuz!\n")
-        kelime = input("Bulunmasini istediginiz kelimeyi girin:")
-        kelime = kelime.upper
     os.system("clear")
     print("A B C D E F G H I J K L M N O P R S T U V Y Z W Q X\n")
+    print("***********************************")
 
 
 def OyunMenu():
